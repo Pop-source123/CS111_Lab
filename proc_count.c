@@ -17,13 +17,11 @@ static int proc_count(struct seq_file *m, void *v){
 	seq_printf(m,"%d\n", n);
 	return 0;
 }
-
-/*open function to /proc/count file*/
+/*
 static int proc_count_open(struct inode *proc_node, struct file *proc_file) {
 	return single_open(proc_file, proc_count, NULL);
 }
 
-/*kernel file operations structure*/
 static const struct file_operations proc_file_operations = {
     .owner      = THIS_MODULE,
     .open       = proc_count_open,
@@ -31,6 +29,7 @@ static const struct file_operations proc_file_operations = {
     .llseek     = seq_lseek,
     .release    = single_release,
 };
+*/
 
 /*init function for the module*/
 static int __init proc_count_init(void) {
