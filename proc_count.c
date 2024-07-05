@@ -34,7 +34,7 @@ static const struct file_operations proc_file_operations = {
 
 /*init function for the module*/
 static int __init proc_count_init(void) {
-	entry = proc_create("count", 0, NULL, proc_count);
+	entry = proc_create("count", 0, NULL, &proc_file_operations);
 	pr_info("proc_count: init\n");
 	return 0;
 }
